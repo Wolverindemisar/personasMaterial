@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">PersonasMaterial</string>
     <string name="action_settings">Settings</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="titulo">Agregar Personas</string>
+    <string name="agregar">Agregar</string>
+    <string name="limpiar">Limpiar</string>
 </resources>
