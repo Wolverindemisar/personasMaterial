@@ -1,5 +1,6 @@
 package com.example.personasmaterial;
 
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +20,7 @@ public class AgregarPersona extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_persona);
-
+        fotos = new ArrayList<>();
         fotos.add(R.drawable.images);
         fotos.add(R.drawable.images2);
         fotos.add(R.drawable.images3);
@@ -42,7 +43,7 @@ public class AgregarPersona extends AppCompatActivity {
         p.guardar();
 
         Limpiar();
-        Snackbar.make(v, "Persona Guardada Exitosamente", Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(v, getString(R.string.mensaje), Snackbar.LENGTH_SHORT).show();
     }
 
     public void limpiar (View v)
@@ -63,5 +64,12 @@ public class AgregarPersona extends AppCompatActivity {
         Random r = new Random();
         fotoSeleccionada = r.nextInt(this.fotos.size());
         return fotos.get(fotoSeleccionada);
+    }
+
+    public void onBackPressed()
+    {
+        finish();
+        Intent i = new Intent(AgregarPersona.this, MainActivity.class);
+        startActivity(i);
     }
 }
