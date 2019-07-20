@@ -18,8 +18,8 @@
         fab:menu_shadowRadius="4dp"
         fab:menu_shadowXOffset="1dp"
         fab:menu_shadowYOffset="3dp"
-        fab:menu_colorNormal="#DA4336"
-        fab:menu_colorPressed="#E75043"
+        fab:menu_colorNormal="@color/colorAccent"
+        fab:menu_colorPressed="@color/colorAccent"
         fab:menu_colorRipple="#99FFFFFF"
         fab:menu_animationDelayPerItem="50"
         fab:menu_icon="@drawable/fab_add"
@@ -34,7 +34,11 @@
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_menu_delete"
             fab:fab_size="mini"
-            fab:fab_label="@string/eliminar" />
+            fab:fab_label="@string/eliminar"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_colorPressed="@color/colorAccent"
+            android:onClick="eliminar"
+            />
 
     </com.github.clans.fab.FloatingActionMenu>
 
